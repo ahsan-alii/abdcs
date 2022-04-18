@@ -56,7 +56,7 @@
               <a href="">Certifications</a>
             </li>
             <li>
-              <a href="">Equipments</a>
+              <a href="#equipment">Equipments</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -472,25 +472,43 @@
           />
         </div>
       </div>
-      <h1
-      id="equipment"
-      class="services_title"
-      data-aos-delay="200"
-      data-aos="zoom-in-right"
-      data-aos-duration="1000"
-    >
-      Equipment
       <div class="equipment">
-        <div class="swiper mySwiper">
-          <div class="swiper-slide">
-            <img src="/assets/machine1.jpg" alt="">
+        <h1
+          id="equipment"
+          class="services_title"
+          data-aos-delay="200"
+          data-aos="zoom-in-right"
+          data-aos-duration="1000"
+        >
+          Equipment
+        </h1>
+
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/machine1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/machine2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/machine3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/machine4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/machine5.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/machine6.jpg" alt="" />
+            </div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
-    </h1>
       <div class="teamBg clientsBg">
         <h1 class="services_title">Clients</h1>
         <section class="clients">
@@ -866,6 +884,22 @@
             prevEl: ".swiper-button-prev",
           },
         });
+
+        var swiper = new Swiper(".mySwiper2", {
+          slidesPerView: ownSlidesPerView,
+          spaceBetween: 30,
+          slidesPerGroup: 1,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
       });
 
       var swiper = new Swiper(".mySwiper", {
@@ -874,6 +908,22 @@
         slidesPerGroup: 1,
         loop: false,
         loopFillGroupWithBlank: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: ownSlidesPerView,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

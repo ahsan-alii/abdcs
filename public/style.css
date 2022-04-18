@@ -212,6 +212,16 @@ nav .name {
 .about_title::after {
   left: 0;
 }
+.equipment {
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+.equipment img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
 .overViewBg {
   background: var(--primaryDarkLight);
   color: white;
@@ -419,9 +429,7 @@ nav .name {
   border: unset;
   margin: 10px 0px;
 }
-.contactForm .form {
-  /* max-width: 500px; */
-}
+
 .contactForm p {
   font-size: 1.3rem;
   max-width: 300px;
@@ -447,9 +455,7 @@ footer img {
   display: flex;
   align-items: center;
 }
-.showcase img:hover {
-  /* transform: scale(1.1); */
-}
+
 /* ============================ */
 /* ========RESPONSIVE========== */
 /* ============================ */
