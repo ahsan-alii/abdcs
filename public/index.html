@@ -65,11 +65,17 @@
         </div>
       </nav>
       <section id="home" class="mainVideo">
-        <h2>Leaders in Quality Construction and infrastructure</h2>
+        <div class="hero-text-div">
+          <h2>Leaders in Quality Construction and infrastructure</h2>
+          <span class="chevronDown"
+            ><a href="#services"><i class="fas fa-chevron-down"></i></a
+          ></span>
+        </div>
+        <!-- <h2>Leaders in Quality Construction and infrastructure</h2>
         <br />
         <span class="chevronDown"
           ><a href="#services"><i class="fas fa-chevron-down"></i></a
-        ></span>
+        ></span> -->
         <video
           autoplay="true"
           muted="true"
@@ -77,10 +83,9 @@
           src="assets/Untitled.mp4"
         ></video>
       </section>
+      <div id="services" style="height: 100px"></div>
       <h1
-        id="services"
         class="services_title"
-        data-aos-delay="200"
         data-aos="zoom-in-right"
         data-aos-duration="1000"
       >
@@ -215,11 +220,11 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
+      <div id="aboutUs" style="height: 100px"></div>
       <div class="aboutBg">
         <section class="about">
           <div class="textSection">
             <h1
-              id="aboutUs"
               class="services_title about_title"
               data-aos="zoom-in-left"
               data-aos-duration="1000"
@@ -336,11 +341,11 @@
           </div>
         </div>
       </div>
+      <div id="projects" style="height: 100px"></div>
       <h1
         class="services_title"
         data-aos="zoom-in-left"
         data-aos-duration="1000"
-        id="projects"
       >
         Projects
       </h1>
@@ -472,9 +477,9 @@
           />
         </div>
       </div>
+      <div id="equipment" style="height: 100px"></div>
       <div class="equipment">
         <h1
-          id="equipment"
           class="services_title"
           data-aos-delay="200"
           data-aos="zoom-in-right"
@@ -482,6 +487,7 @@
         >
           Equipment
         </h1>
+        <div style="margin: 100px 0"></div>
 
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
@@ -569,7 +575,8 @@
         </section>
       </div>
     </div>
-    <h1 id="contact" class="services_title">Contact</h1>
+    <div id="contact" style="height: 100px"></div>
+    <h1 class="services_title">Contact</h1>
 
     <section class="contact">
       <div id="map"></div>
@@ -865,49 +872,58 @@
       let ownSlidesPerView =
         document.documentElement.getBoundingClientRect().width < 768 ? 1 : 3;
 
-      window.addEventListener("resize", () => {
-        ownSlidesPerView =
-          document.documentElement.getBoundingClientRect().width < 768 ? 1 : 3;
+      // window.addEventListener("resize", () => {
+      //   ownSlidesPerView =
+      //     document.documentElement.getBoundingClientRect().width < 768 ? 1 : 3;
 
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: ownSlidesPerView,
-          spaceBetween: 30,
-          slidesPerGroup: 1,
-          loop: false,
-          loopFillGroupWithBlank: false,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
+      //   var swiper = new Swiper(".mySwiper", {
+      //     slidesPerView: ownSlidesPerView,
+      //     spaceBetween: 30,
+      //     slidesPerGroup: 1,
+      //     loop: true,
+      //     autoplay: {
+      //       delay: 1000,
+      //     },
+      //     loopFillGroupWithBlank: true,
+      //     pagination: {
+      //       el: ".swiper-pagination",
+      //       clickable: true,
+      //     },
+      //     navigation: {
+      //       nextEl: ".swiper-button-next",
+      //       prevEl: ".swiper-button-prev",
+      //     },
+      //   });
 
-        var swiper = new Swiper(".mySwiper2", {
-          slidesPerView: ownSlidesPerView,
-          spaceBetween: 30,
-          slidesPerGroup: 1,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      });
+      //   var swiper = new Swiper(".mySwiper2", {
+      //     slidesPerView: ownSlidesPerView,
+      //     spaceBetween: 30,
+      //     slidesPerGroup: 1,
+      //     loop: true,
+      //     autoplay: {
+      //       delay: 1000,
+      //     },
+      //     loopFillGroupWithBlank: true,
+      //     pagination: {
+      //       el: ".swiper-pagination",
+      //       clickable: true,
+      //     },
+      //     navigation: {
+      //       nextEl: ".swiper-button-next",
+      //       prevEl: ".swiper-button-prev",
+      //     },
+      //   });
+      // });
 
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: ownSlidesPerView,
         spaceBetween: 30,
         slidesPerGroup: 1,
+        autoplay: {
+          delay: 1000,
+        },
         loop: false,
-        loopFillGroupWithBlank: false,
+        loopFillGroupWithBlank: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -918,11 +934,15 @@
         },
       });
 
-      var swiper = new Swiper(".mySwiper2", {
+      var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: ownSlidesPerView,
         spaceBetween: 30,
         slidesPerGroup: 1,
-        loop: true,
+        autoplay: {
+          delay: 1000,
+        },
+
+        loop: false,
         loopFillGroupWithBlank: true,
         pagination: {
           el: ".swiper-pagination",
